@@ -16,6 +16,9 @@
   "top":200
   }
   ],
+  "rfc2217": {
+    "port": 4000
+  },
 
   "connections": [
     [ "esp:TX0", "$serialMonitor:RX", "", [] ],
@@ -26,5 +29,12 @@
     ["esp:D22","mpu:SCL","blue",[]]
   ],
 
-  "dependencies": {}
+  "dependencies": {},
+
+  "serialMonitor": {
+  "collapse": false,
+  "convertEol": false,
+  "display": "auto",
+  "newline": "lf"
+  }
 }
