@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "author": "Ewan Soueidan",
+  "editor": "wokwi",
+  "parts": [
+    {
+    "id":"esp",
+    "type": "wokwi-esp32-devkit-v1",
+    "left": 0,
+    "top": 0
+  },
+  {
+  "id":"mpu",
+  "type": "wokwi-mpu6050",
+  "left":200,
+  "top":200
+  }
+  ],
+
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    ["esp:GND.1","mpu:GND","black",[]],
+    ["esp:3V3","mpu:VCC","red",[]],
+    ["esp:D21","mpu:SDA","green",[]],
+    ["esp:D22","mpu:SCL","blue",[]]
+  ],
+
+  "dependencies": {}
+}
